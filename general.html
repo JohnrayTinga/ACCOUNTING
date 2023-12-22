@@ -1,0 +1,481 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <title>GENERAL</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            /**.container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }**/
+            header {
+                background: linear-gradient(to right, #010109,#414546);
+                padding: 10px;
+                transition: background-color 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+            header:hover {
+                background-color: #444;
+            }
+            .logo {
+                width: 100px;
+                height: auto;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            .site-title {
+                display: inline-block;
+                margin: 0;
+                vertical-align: middle;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 30px;
+                background: linear-gradient(to right, #6600ff, #00ffff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .navbar {
+                text-align: right;
+                margin-top: 20px;
+            }
+
+            .navbar a {
+                display: inline-block;
+                margin: 0 10px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px;
+            }
+            .navbar-toggle {
+                display: none;
+                cursor: pointer;
+                padding: 10px;
+            }
+
+            .navbar-toggle span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #fff;
+                margin-bottom: 5px;
+            }
+
+            @media (max-width: 768px) {
+                .navbar-toggle {
+                    display: block;
+                }
+
+                .navbar {
+                    display: none;
+                    padding-top: 10px;
+                }
+
+                .navbar.open {
+                    display: block;
+                }
+
+                .navbar a {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+
+            #about {
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .icon {
+                font-size: 24px;
+                margin-right: 5px;
+            }
+            h2 {
+                color: #333;
+            }
+
+            p {
+                color: #666;
+            }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+            
+            .table-container {
+                overflow-x: auto;
+            }
+            
+            .table-container table {
+                min-width: 800px;
+            }
+            
+            .table-container::-webkit-scrollbar {
+                height: 8px;
+            }
+            
+            .table-container::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            .table-container::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+            
+            .table-container::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            
+            .table-container td:first-child,
+            .table-container th:first-child {
+                padding-left: 20px;
+            }
+            
+            .table-container td:last-child,
+            .table-container th:last-child {
+                padding-right: 20px;
+            }
+            .navbar a:hover {
+              background-color: white;
+              color: black;
+              border-radius: 5px;
+            }
+
+            .navbar a:hover .icon {
+              color: black;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                font-size: 14px;
+            }
+
+            .social-icons {
+                margin-top: 10px;
+            }
+
+            .social-icons a {
+                color: #fff;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <img src="UC_logo.png" alt="File Logo" class="logo">
+                <h1 class="site-title">ACCOUNTING</h1>
+            </div>
+                <div class="navbar-toggle" onclick="toggleNavbar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar">
+                <a href="acctg.html"><i class='bx bx-home icon'></i></a>
+                <a href="contact.html"><i class='bx bx-envelope icon'></i></a>
+                <a href="about.html"><i class='bx bx-info-circle icon'></i></a>
+                <a href="general.html">General Journal</a>
+                <a href="Adjusting.html">Adjusting Entry</a>
+                <a href="ledger.html">General Ledger</a>
+                <a href="worksheet.html">Worksheet</a>
+
+
+            </div>
+        </header>
+
+        <script>
+            function toggleNavbar() {
+                var navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('open');
+            }
+        </script>
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="5">General Journal</th>
+                    </tr>
+                </thead>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Particulars</th>
+                    <th>Account No.</th>
+                    <th>Dr</th>
+                    <th>Cr</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2018 Dec. 1</td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td>Ᵽ150,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Detoya, Capital</td>
+                    <td>310</td>
+                    <td></td>
+                    <td>Ᵽ150,000 </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record the initial investment of Detoya. </b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 2</td>
+                    <td>Rent Expense </td>
+                    <td>530</td>
+                    <td>Ᵽ8,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ8,000 </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record the payment of the rent</b> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 2</td>
+                    <td>Supplies</td>
+                    <td>140</td>
+                    <td>Ᵽ7,200 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Accounts Payable</td>
+                    <td>210</td>
+                    <td></td>
+                    <td>Ᵽ7,200</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record the supplies purchased on account </b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 3</td>
+                    <td>Office Equipment</td>
+                    <td>150</td>
+                    <td>Ᵽ75,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ75,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>To record downpayment of purchased office equipment and on account</b> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 8</td>
+                    <td>Accounts Payable</td>
+                    <td>210</td>
+                    <td>Ᵽ7,200 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ7,200</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>To record payment of supplies on account in Dec.2</b> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 14</td>
+                    <td>Salaries Expense</td>
+                    <td>510</td>
+                    <td>Ᵽ6,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ6,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record payment of salaries to assistant for two weeks.</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 20</td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td>Ᵽ20,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Consulting Revenues</td>
+                    <td>410</td>
+                    <td></td>
+                    <td>Ᵽ20,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record Consulting services.</b> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 28</td>
+                    <td>Salaries Expense</td>
+                    <td>510</td>
+                    <td>Ᵽ6,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ6,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b>To record payment of salaries to assistant for two weeks. </b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 30</td>
+                    <td>Accounts Receivables</td>
+                    <td>120</td>
+                    <td>Ᵽ48,000 </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Consulting Revenues</td>
+                    <td>410</td>
+                    <td></td>
+                    <td>Ᵽ48,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record consulting services.</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2018 Dec. 31</td>
+                    <td>Detoya, Drawing</td>
+                    <td>320</td>
+                    <td>Ᵽ12,000</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cash</td>
+                    <td>110</td>
+                    <td></td>
+                    <td>Ᵽ12,000</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><b> To record the withdrawal of Detoya.</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            <thead>
+                <tr>
+                    <th colspan="6"> </th>
+                </tr>
+            </thead>
+            </tbody>
+        </table>
+    </div>
+
+                <footer>
+                <div class="container">
+                    <div class="social-icons">
+                        <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                    <p>&copy; 2023 Accounting Website. All rights reserved.</p>
+                </div>
+            </footer>
+</body>
+
+</html>

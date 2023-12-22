@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>HOME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           /** background: linear-gradient(to right, #010109,#414546);*/
+        }
+
+        /*.container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }*/
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        header {
+            background: linear-gradient(to right, #010109,#414546);
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header:hover {
+            background-color: #444;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .site-title {
+            display: inline-block;
+            margin: 0;
+            vertical-align: middle;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 30px;
+            background: linear-gradient(to right, #6600ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+                .navbar {
+            text-align: center;
+            margin-top: 20px;
+
+        }
+        .navbar a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        .navbar-toggle {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .navbar-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-toggle {
+                display: block;
+            }
+
+            .navbar {
+                display: none;
+                padding-top: 10px;
+            }
+
+            .navbar.open {
+                display: block;
+            }
+
+            .navbar a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        #about {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .navbar a:hover {
+          background-color: white;
+          color: black;
+          border-radius: 5px;
+        }
+
+        .navbar a:hover .icon {
+          color: black;
+        }
+
+        .homepage-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 5px;
+            text-decoration: none;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th,td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            /*font-weight: bold;*/
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .table-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="UC_logo.png" alt="File Logo" class="logo">
+            <h1 class="site-title">ACCOUNTING</h1>
+        </div>
+        <div class="navbar-toggle" onclick="toggleNavbar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar">
+            <a href="acctg.html"><i class='bx bx-home icon'></i></a>
+            <a href="contact.html"><i class='bx bx-envelope icon'></i></a>
+            <a href="about.html"><i class='bx bx-info-circle icon'></i></a>
+            <a href="General.html">General Journal</a>
+            <a href="Adjusting.html">Adjusting Entry</a>
+            <a href="ledger.html">General Ledger</a>
+            <a href="worksheet.html">Worksheet</a>
+        </div>
+    </header>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="12">Edgar Detoya, Tax Consultant</th>
+            </tr>
+            <tr>
+                <th colspan="12">Worksheet</th>
+            </tr>
+            <tr>
+                <th colspan="12">For the Month Ended, December 31, 2018</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Account No.</th>
+                <th rowspan="2">Account Title</th>
+                <th colspan="2">Unadjusted Trial Balance</th>
+                <th colspan="2">Adjustments</th>
+                <th colspan="2">Adjusted Trial Balance</th>
+                <th colspan="2">Statement of Comprehensive Income</th>
+                <th colspan="2">Statement of Financial Position</th>
+            </tr>
+            <tr>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Debit</th>
+                <th>Credit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>110</td>
+                <td>Cash</td>
+                <td>₱93,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱93,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱93,000.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>120</td>
+                <td>Accounts Receivable</td>
+                <td>₱48,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱48,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱48,000.00</td>
+                <td></td>
+            </tr>            
+            <tr>
+                <td>130</td>
+                <td>Fees Receivable</td>
+                <td></td>
+                <td></td>
+                <td>D.10,000</td>
+                <td></td>
+                <td>₱10,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱10,000.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>140</td>
+                <td>Supplies</td>
+                <td>₱7,200.00</td>
+                <td></td>
+                <td></td>
+                <td>A.2,500</td>
+                <td>₱4,700.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱2,500.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>150</td>
+                <td>Office Equipment</td>
+                <td>₱75,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱75,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱75,000.00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>155</td>
+                <td>Accumulated Depreciation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>C.800</td>
+                <td></td>
+                <td>₱800</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱800.00</td>
+            </tr>            
+            <tr>
+                <td>210</td>
+                <td>Accounts Payable</td>
+                <td></td>
+                <td>₱38,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱38,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱38,000.00</td>
+            </tr>
+            <tr>
+                <td>220</td>
+                <td>Salaries Payable</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>B.1,800</td>
+                <td></td>
+                <td>₱1,800.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱1,800.00</td>
+            </tr>
+            <tr>
+                <td>310</td>
+                <td>Detoya, Capital</td>
+                <td></td>
+                <td>₱150,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱150,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱150,000.00</td>
+            </tr>
+            <tr>
+                <td>320</td>
+                <td>Detoya, Drawing</td>
+                <td>₱12,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱12,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱12,000.00</td>
+                <td></td>
+            </tr>            
+            <tr>
+                <td>330</td>
+                <td>Income Summary</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>410</td>
+                <td>Consulting</td>
+                <td></td>
+                <td>₱68,000.00</td>
+                <td></td>
+                <td>D.10,000</td>
+                <td></td>
+                <td>₱78,000.00</td>
+                <td></td>
+                <td>₱78,000.00</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>510</td>
+                <td>Salaries Expense</td>
+                <td>₱12,000.00</td>
+                <td></td>
+                <td>B.1,800</td>
+                <td></td>
+                <td>₱13,800.00</td>
+                <td></td>
+                <td>₱13,800.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>520</td>
+                <td>Supplies Expense</td>
+                <td></td>
+                <td></td>
+                <td>A.2,500</td>
+                <td></td>
+                <td>₱2,500.00</td>
+                <td></td>
+                <td>₱2,500.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+            <tr>
+                <td>530</td>
+                <td>Rent Expense</td>
+                <td>₱8,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱8,000.00</td>
+                <td></td>
+                <td>₱8,000.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>540</td>
+                <td>Depreciation Expense</td>
+                <td></td>
+                <td></td>
+                <td>C.800</td>
+                <td></td>
+                <td>₱800.00</td>
+                <td></td>
+                <td>₱800.00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td><b><u>₱256,000.00</u></b></td>
+                <td><b><u>₱256,000.00</u></b></td>
+                <td><b><u>₱15,100.00</u></b></td>
+                <td><b><u>₱15,100.00</u></b></td>
+                <td><b><u>₱268,600.00</u></b></td>
+                <td><b><u>₱268,600.00</u></b></td>
+                <td>₱25,100.00</td>
+                <td>₱78,000.00</td>
+                <td>₱243,500.00</td>
+                <td>₱190,600.00</td>
+            </tr>            
+            <tr>
+                <td></td>
+                <td><b>PROFIT</b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>₱52,900.00</td>
+                <td></td>
+                <td></td>
+                <td>₱52,900.00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b><u>₱78,000.00</u></b></td>
+                <td><b><u>₱78,000.00</u></b></td>
+                <td><b><u>₱243,500.00</u></b></td>
+                <td><b><u>₱243,500.00</u></b></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+    <div class="table-container">
+        <table>
+        <thead>
+            <tr>
+                <th colspan="3">Edgar Detoya, Tax Consultant</th>
+            </tr>
+            <tr>
+                <th colspan="3">Statement of Comprehensive Income</th>
+            </tr>
+            <tr>
+                <th colspan="3">For the Month Ended, December 31, 2018</th>
+            </tr>
+            <tr>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;" colspan="3"><b><u>Revenue:</u></b></td>
+            </tr>
+            <tr>
+                <td colspan="1">Consulting Revenues</td>
+                <td ></td>
+                <td colspan="1">₱78,000.00</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="3"><b><u>Expense:</u></b></td>
+            </tr>
+            <tr>
+                <td colspan="1"> Salaries Expense</td>
+                <td colspan="1">₱13,800.00</td>
+                <th ></th>
+            </tr>
+            <tr>
+                <td colspan="1"> Supplies Expense</td>
+                <td colspan="1">₱2,500.00</td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td colspan="1"> Rent Expense</td>
+                <td colspan="1">₱8,000.00</td>
+                <td ></td>
+            </tr>
+            <tr>
+                <td colspan="1"> Depreciation Expense</td>
+                <td colspan="1">₱800.00</td>
+                <td><u>₱25,100.00</u></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="2"><b><u>Profit:</u></b></td>
+                <td colspan="1"><u>₱52,900.00</u></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+        <div class="table-container">
+        <table>
+        <thead>
+            <tr>
+                <th colspan="3">Edgar Detoya, Tax Consultant</th>
+            </tr>
+            <tr>
+                <th colspan="3">Statement of Changes in Owner's Equity</th>
+            </tr>
+            <tr>
+                <th colspan="3">For the Month Ended, December 31, 2018</th>
+            </tr>
+            <tr>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+            <tr>
+                <td style="text-align: left;">Detoya, Capital-December 1, 2018</td>
+                <td colspan="2">₱150,000.00</td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align: left;"> Add: Profit</td>
+                <td colspan="2">₱52,900.00</td>
+            </tr>
+            <tr>
+                <td colspan="1" style="text-align: left;"> Total</td>
+                <td colspan="2">₱202,900.00</td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: left;"> Less: Detoya, withdrawal</td>
+                <td colspan="1">₱12,000.00</td>
+
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="2">Detoya,Capital- December 31, 2018</td>
+                <td colspan="1"><u>₱190,900.00</u></td>
+            </tr>
+        </table>
+    </div>
+
+     <div class="table-container">
+        <table>
+        <thead>
+            <tr>
+                <th colspan="2">Edgar Detoya, Tax Consultant</th>
+            </tr>
+            <tr>
+                <th colspan="2">Statement of Financial Position</th>
+            </tr>
+            <tr>
+                <th colspan="2">For the Month Ended, December 31, 2018</th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+            <tr>
+                <th colspan="2"><u>ASSETS</u></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;" colspan="2"><b>Current Assets:</b></td>
+            </tr>
+            <tr>
+                <td>Cash</td>
+                <td colspan="1">₱93,800.00</td>
+            </tr>
+            <tr>
+                <td colspan="1"> Accounts Receivable</td>
+                <td colspan="1">₱48,000.00</td>
+
+            </tr>
+            <tr>
+                <td colspan="1"> Fees Receivable</td>
+                <td colspan="1">₱2,500.00</td>
+
+            </tr>
+            <tr>
+                <td colspan="1"> Rent Expense</td>
+                <td colspan="1">₱10,000.00</td>
+            </tr>
+            <tr>
+                <td colspan="1"> Supplies</td>
+                <td colspan="1">₱4700.00</td>
+
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="1"><b>Total Current Assets</b></td>
+                <th ><u>₱156,500.00</u></th>
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="2"><b>Non-Current Assets:</b></td>
+            </tr>
+            <tr>
+                <td style="text-align: left;" colspan="2"><b>Propertty, Plant and Equipment</b></td>
+            </tr>
+            <tr>
+                <td colspan="1"> Office equipment</td>
+                <td colspan="1">₱75,000.00</td>
+            </tr>
+            <tr>
+                <td colspan="1"> <b>Less:</b> Accumulated Depreciation</td>
+                <td colspan="1">₱800.00</td>
+
+            </tr>
+            <tr>
+                <td colspan="1"> <b>Total Non-Current Assets</b></td>
+                <td colspan="1">₱74,200.00</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="1"> <b>TOTAL ASSETS</b></td>
+                <td colspan="1"><b><u>₱230,700.00</u></b></td>
+
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="table-container">
+        <table>
+        <thead>
+            <tr>
+                <th colspan="2">LIABILITY AND OWNER;S EQUITY</th>
+            </tr>
+            <tr>
+                <th colspan="2">LIABILITIES</th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: left;" colspan="2"><b>Current Liabilities:</b></td>
+            </tr>
+            <tr>
+                <td>Accoutns Payable</td>
+                <td colspan="1">₱38,000.00</td>
+            </tr>
+            <tr>
+                <td colspan="1"> Salaries Payable</td>
+                <td colspan="1">₱1,800.00</td>
+
+            </tr>
+            <tr>
+                <td colspan="1"> <b>Total Current Liabilites</b></td>
+                <td colspan="1"><b><u>₱39,800.00</u></b></td>
+
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+            <tr>
+                <th colspan="2">OWNER'S EQUITY</th>
+            </tr>
+            <tr>
+                <th colspan="2"></th>
+            </tr>
+            <tr>
+                <td colspan="1"> Detoya, Capital</td>
+                <td colspan="1">₱190,000.00</td>
+
+            </tr>
+            <tr>
+                <td colspan="1"><b> Total Liabilites and Owner's Equity</b></td>
+                <td colspan="1"><b><u>₱230,700.00</u></b></td>
+
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+
+
+                <footer>
+                <div class="container">
+                    <div class="social-icons">
+                        <a href="#"><i class="bx bxl-facebook-square"></i></a>
+                        <a href="#"><i class="bx bxl-twitter"></i></a>
+                        <a href="#"><i class="bx bxl-instagram"></i></a>
+                    </div>
+                    <p>&copy; 2023 Accounting Website. All rights reserved.</p>
+                </div>
+            </footer>
+                <script>
+                function toggleNavbar() {
+                    var navbar = document.querySelector('.navbar');
+                    navbar.classList.toggle('open');
+                }
+            </script>
+
+</body>
+
+</html>
